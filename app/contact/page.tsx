@@ -1,16 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-export default function Contact() {
+function ContactFormComponent() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
     subject: "inquiry",
+    honeypot: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -23,14 +28,25 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
+
     try {
+      // Get reCAPTCHA token
+      const token = await executeRecaptcha("submit_contact_form");
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken: token,
+        }),
       });
+
+      const data = await response.json();
 
       if (response.ok) {
         setSubmitted(true);
@@ -40,11 +56,17 @@ export default function Contact() {
           phone: "",
           message: "",
           subject: "inquiry",
+          honeypot: "",
         });
-        setTimeout(() => setSubmitted(false), 3000);
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        setError(data.error || "Failed to send message");
       }
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setError("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -58,7 +80,6 @@ export default function Contact() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {/* Contact Info */}
         <div>
           <h3 className="text-xl font-bold text-myo-blue mb-4">Address</h3>
           <p className="text-gray-700">
@@ -95,7 +116,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Contact Form */}
       <div className="bg-white border border-gray-200 rounded-lg p-8">
         <h2 className="text-2xl font-bold text-myo-blue mb-6">Send a Message</h2>
 
@@ -105,7 +125,24 @@ export default function Contact() {
           </div>
         )}
 
+        {error && (
+          <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg mb-6">
+            {error}
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Honeypot field - hidden from users */}
+          <input
+            type="text"
+            name="honeypot"
+            value={formData.honeypot}
+            onChange={handleChange}
+            style={{ display: "none" }}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -188,11 +225,24 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="w-full bg-myo-blue text-white font-bold py-3 rounded-lg hover:opacity-90 transition"
+            disabled={loading}
+            className="w-full bg-myo-blue text-white font-bold py-3 rounded-lg hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
+
+        <p className="text-xs text-gray-500 mt-4 text-center">
+          This site is protected by reCAPTCHA and the Google{" "}
+          <a href="https://policies.google.com/privacy" className="hover:underline">
+            Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a href="https://policies.google.com/terms" className="hover:underline">
+            Terms of Service
+          </a>{" "}
+          apply.
+        </p>
       </div>
 
       <div className="mt-12 text-center text-gray-600">
@@ -200,5 +250,25 @@ export default function Contact() {
         <p>Special services available Thursdays & Saturdays until late</p>
       </div>
     </div>
+  );
+}
+
+export default function Contact() {
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  if (!siteKey) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <p className="text-red-600">
+          reCAPTCHA is not configured. Please set up environment variables.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={siteKey}>
+      <ContactFormComponent />
+    </GoogleReCaptchaProvider>
   );
 }
