@@ -1,0 +1,70 @@
+{
+  "about": {
+    "title": "About MYO",
+    "garimaBio": "[Garima's background and story to be added]",
+    "garimaroleTitle": "Meet Garima Arora",
+    "philosophy": {
+      "title": "Our Philosophy",
+      "text": "[Core philosophy and approach to be added]"
+    },
+    "waldorfExplanation": {
+      "title": "Why Waldorf & Art Therapy?",
+      "text": "[Explanation of methodology to be added]"
+    },
+    "photoCaption": "Photo of Garima to be added"
+  },
+  "services": {
+    "theNest": {
+      "id": "the-nest",
+      "name": "The Nest",
+      "shortDescription": "A safe, nurturing space for toddlers with open-ended play, Waldorf-based learning, and a co-working area for parents.",
+      "fullDescription": "[Description of The Nest program to be added]",
+      "offerings": [
+        "Open-ended play area",
+        "Playhouse for toddlers",
+        "Daycare and aftercare services",
+        "Parents co-working space",
+        "Birthday parties & play dates",
+        "Extra-curricular classes"
+      ],
+      "ctaText": "Inquire About The Nest"
+    },
+    "healingSpace": {
+      "id": "healing-space",
+      "name": "The Healing Space",
+      "shortDescription": "Art-based therapy for children with behavioral and learning challenges. Meditation and wellness support for adults.",
+      "fullDescription": "[Description of The Healing Space to be added]",
+      "offerings": [
+        "Meditation classes",
+        "Arts-based therapy for children with behavioral/learning challenges",
+        "Mental health support for adults",
+        "Special late-hour services (Thursdays & Saturdays)"
+      ],
+      "ctaText": "Inquire About Healing Services"
+    },
+    "specialNeeds": {
+      "id": "special-needs",
+      "name": "Special Needs Support",
+      "shortDescription": "Specialized support for children with behavioral and learning challenges through art-based therapy.",
+      "fullDescription": "We provide specialized support for children with behavioral and learning challenges through art-based therapy and personalized care.",
+      "offerings": [
+        "Individualized therapy plans",
+        "Art-based learning approaches",
+        "Behavioral support",
+        "Parent consultation and guidance"
+      ],
+      "ctaText": "Discuss Your Child's Needs"
+    }
+  },
+  "businessInfo": {
+    "businessName": "MYO Learning Centre and Daycare",
+    "tagline": "A Waldorf Daycare and Healing Centre",
+    "description": "A nurturing space for child growth and active development through art-based learning and holistic care.",
+    "address": "21, Suraj Nagar East, Civil Lines, Jaipur",
+    "phone": "+91 93118 97957",
+    "instagram": "@myo_center",
+    "instagramUrl": "https://instagram.com/myo_center",
+    "hours": "9:00 AM to 6:30 PM",
+    "specialHours": "Special late-hour services available on Thursdays & Saturdays"
+  }
+}
