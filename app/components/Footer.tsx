@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-myo-peach">MYO</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/myo.jpg"
+                alt="MYO Logo"
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
+              />
+              <h3 className="text-xl font-bold text-myo-peach">MYO</h3>
+            </div>
             <p className="text-gray-300 text-sm">
               A Waldorf daycare and healing centre focused on child growth and
               active development.

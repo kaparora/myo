@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -7,7 +8,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="text-2xl font-bold text-myo-blue">MYO</div>
+            <Image
+              src="/myo.jpg"
+              alt="MYO Logo"
+              width={50}
+              height={50}
+              className="rounded-full object-cover"
+            />
+            <span className="text-xl font-bold text-myo-blue hidden sm:inline">MYO</span>
           </Link>
 
           {/* Navigation Links */}
