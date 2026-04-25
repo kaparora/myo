@@ -52,8 +52,17 @@ export default function Footer() {
               Contact
             </h4>
             <div className="text-myo-cream text-sm space-y-2">
-              <p>21, Suraj Nagar East</p>
-              <p>Civil Lines, Jaipur</p>
+              <p>
+                <a
+                  href="https://maps.app.goo.gl/ANRuGnoKSBzEAcDY6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-myo-yellow hover:text-white"
+                >
+                  21, Suraj Nagar East<br />
+                  Civil Lines, Jaipur
+                </a>
+              </p>
               <p>📞 +91 93118 97957</p>
               <p>
                 <a

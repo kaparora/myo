@@ -94,11 +94,18 @@ function ContactFormComponent() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div>
           <h3 className="text-xl font-serif font-light text-myo-teal mb-4">Address</h3>
-          <p className="text-myo-teal-soft">
-            21, Suraj Nagar East<br />
-            Civil Lines, Jaipur<br />
-            India
-          </p>
+          <a
+            href="https://maps.app.goo.gl/ANRuGnoKSBzEAcDY6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-myo-rose hover:underline"
+          >
+            <p className="text-myo-teal-soft">
+              21, Suraj Nagar East<br />
+              Civil Lines, Jaipur<br />
+              India
+            </p>
+          </a>
         </div>
 
         <div>
