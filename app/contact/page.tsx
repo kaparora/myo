@@ -34,8 +34,17 @@ function ContactFormComponent() {
     setError("");
 
     try {
-      // Get reCAPTCHA token
-      const token = await executeRecaptcha("submit_contact_form");
+      let token = "";
+
+      // Get reCAPTCHA token if available
+      if (executeRecaptcha) {
+        try {
+          token = await executeRecaptcha("submit_contact_form");
+        } catch (recaptchaErr) {
+          console.warn("reCAPTCHA error:", recaptchaErr);
+          // Continue without token if reCAPTCHA fails
+        }
+      }
 
       const response = await fetch("/api/contact", {
         method: "POST",

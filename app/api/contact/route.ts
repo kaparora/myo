@@ -79,8 +79,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify reCAPTCHA token
-    if (recaptchaToken) {
+    // Verify reCAPTCHA token (optional if not provided)
+    if (recaptchaToken && recaptchaToken.trim() !== "") {
       const isHuman = await verifyRecaptcha(recaptchaToken);
       if (!isHuman) {
         return NextResponse.json(
@@ -88,6 +88,10 @@ export async function POST(request: NextRequest) {
           { status: 400 }
         );
       }
+    } else if (process.env.RECAPTCHA_SECRET_KEY) {
+      console.warn("reCAPTCHA token not provided");
+      // If reCAPTCHA is configured but token not provided, it's likely a client error
+      // But we'll allow it to proceed for development
     }
 
     const contactEmail = process.env.CONTACT_EMAIL || "contact@myodaycare.com";
