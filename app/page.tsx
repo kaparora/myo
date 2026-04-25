@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -6,9 +7,16 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-myo-peach via-myo-pink to-white min-h-[600px] flex items-center justify-center py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-myo-blue mb-6">
-            MYO
-          </h1>
+          <div className="mb-6">
+            <Image
+              src="/myo.jpg"
+              alt="MYO Logo"
+              width={150}
+              height={150}
+              className="rounded-full mx-auto"
+              priority
+            />
+          </div>
           <p className="text-2xl md:text-3xl text-gray-700 mb-6 font-medium">
             A Waldorf Daycare and Healing Centre
           </p>
