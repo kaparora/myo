@@ -1,10 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="sticky top-0 bg-myo-cream shadow-sm border-b border-myo-peach/20 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center md:h-16">
+        <div className="flex justify-between items-center h-16">
           {/* Logo with Lotus Icon */}
           <Link href="/">
             <div className="flex items-center gap-3 font-serif text-2xl font-light tracking-[0.18em]">
@@ -13,8 +18,18 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Navigation Links - Right Aligned */}
-          <div className="flex flex-col md:flex-row gap-4 md:gap-9 text-xs font-medium uppercase tracking-[0.14em] opacity-85 py-3 md:py-0">
+          {/* Hamburger Menu Button - Mobile Only */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden flex flex-col gap-1.5 cursor-pointer"
+          >
+            <span className={`block w-6 h-0.5 bg-myo-teal transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+            <span className={`block w-6 h-0.5 bg-myo-teal transition-all ${isOpen ? "opacity-0" : ""}`}></span>
+            <span className={`block w-6 h-0.5 bg-myo-teal transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+          </button>
+
+          {/* Navigation Links - Desktop Only */}
+          <div className="hidden md:flex gap-9 text-xs font-medium uppercase tracking-[0.14em] opacity-85">
             <Link
               href="/"
               className="text-myo-teal hover:opacity-100 transition-opacity"
@@ -47,6 +62,47 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden pb-4 flex flex-col gap-3 text-xs font-medium uppercase tracking-[0.14em] opacity-85">
+            <Link
+              href="/"
+              className="text-myo-teal hover:opacity-100 transition-opacity block"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-myo-teal hover:opacity-100 transition-opacity block"
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="text-myo-teal hover:opacity-100 transition-opacity block"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              href="/events"
+              className="text-myo-teal hover:opacity-100 transition-opacity block"
+              onClick={() => setIsOpen(false)}
+            >
+              Events
+            </Link>
+            <Link
+              href="/contact"
+              className="text-myo-teal hover:opacity-100 transition-opacity block"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );
