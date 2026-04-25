@@ -42,7 +42,7 @@ export default function Home() {
 
           {/* Footer meta */}
           <footer className="flex items-end justify-between text-[11px] uppercase tracking-[0.18em] text-myo-teal-soft max-w-2xl">
-            <div>Sirsi Road · Jaipur</div>
+            <div>Civil Lines · Jaipur</div>
             <div className="text-right leading-7">
               Ages 2 – 8
               <br />
