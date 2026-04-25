@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/">
             <Image
               src="/myo.jpg"
               alt="MYO Logo"
@@ -15,7 +15,6 @@ export default function Navbar() {
               height={50}
               className="rounded-full object-cover"
             />
-            <span className="text-xl font-bold text-myo-blue hidden sm:inline">MYO</span>
           </Link>
 
           {/* Navigation Links */}
