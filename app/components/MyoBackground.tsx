@@ -24,6 +24,7 @@ export function MyoBackground({
         viewBox="0 0 1600 1000"
         preserveAspectRatio="xMidYMid slice"
         className={`absolute inset-0 h-full w-full ${drift ? "myo-drift" : ""}`}
+        style={{ minHeight: "100%" }}
       >
         <defs>
           <radialGradient id="myoBloomPink" cx="50%" cy="50%" r="50%">
@@ -40,7 +41,7 @@ export function MyoBackground({
             <stop offset="0%"   stopColor="var(--color-myo-rose)"  stopOpacity="0.55" />
             <stop offset="100%" stopColor="var(--color-myo-rose)"  stopOpacity="0" />
           </radialGradient>
-          <filter id="myoEdge" x="-20%" y="-20%" width="140%" height="140%">
+          <filter id="myoEdge" x="-50%" y="-50%" width="200%" height="200%">
             <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves={2} seed={3} />
             <feDisplacementMap in="SourceGraphic" scale={55} />
           </filter>
