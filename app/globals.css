@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #2c3e50;
-  --myo-coral: #f4a8a0;
-  --myo-pink: #e8b4cc;
-  --myo-peach: #f5d5c0;
-  --myo-yellow: #ffc738;
-  --myo-blue: #4a6fa5;
+@theme {
+  /* Brand palette — sampled from the MYO logo */
+  --color-myo-cream:    #FBF7F2;
+  --color-myo-peach:    #F5B6A0;
+  --color-myo-pink:     #F4A6C0;
+  --color-myo-rose:     #E8829F;
+  --color-myo-yellow:   #F5C443;
+  --color-myo-teal:     #3F5B6B;
+  --color-myo-teal-soft:#5C7886;
+
+  /* Fonts — variables come from next/font in layout.tsx */
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-sans:  var(--font-nunito), system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-myo-coral: var(--myo-coral);
-  --color-myo-pink: var(--myo-pink);
-  --color-myo-peach: var(--myo-peach);
-  --color-myo-yellow: var(--myo-yellow);
-  --color-myo-blue: var(--myo-blue);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Body base */
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--font-sans); color: var(--color-myo-teal); }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Tiny gentle drift on the watercolor blooms (optional). Apply by adding
+   class="myo-drift" to the SVG or its wrapper. */
+@keyframes myo-driftA { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-14px, 8px); } }
+@keyframes myo-driftB { 0%,100% { transform: translate(0,0); } 50% { transform: translate(12px,-10px); } }
+@keyframes myo-driftC { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-8px,-12px); } }
+.myo-drift .bloom-a { animation: myo-driftA 22s ease-in-out infinite; transform-origin: center; }
+.myo-drift .bloom-b { animation: myo-driftB 28s ease-in-out infinite; transform-origin: center; }
+.myo-drift .bloom-c { animation: myo-driftC 26s ease-in-out infinite; transform-origin: center; }

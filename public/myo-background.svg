@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" width="1600" height="1000">
+  <rect width="1600" height="1000" fill="#FBF7F2"/>
+  
+  <defs>
+    <radialGradient id="myoBloomPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F4A6C0" stop-opacity="0.8075"/>
+      <stop offset="55%" stop-color="#F4A6C0" stop-opacity="0.33249999999999996"/>
+      <stop offset="100%" stop-color="#F4A6C0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="myoBloomPeach" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5B6A0" stop-opacity="0.76"/>
+      <stop offset="55%" stop-color="#F5B6A0" stop-opacity="0.285"/>
+      <stop offset="100%" stop-color="#F5B6A0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="myoBloomRose" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8829F" stop-opacity="0.5225"/>
+      <stop offset="100%" stop-color="#E8829F" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="myoEdge" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="55"/>
+    </filter>
+  </defs>
+  <g filter="url(#myoEdge)">
+    <ellipse class="bloom-a" cx="1180" cy="280" rx="540" ry="380" fill="url(#myoBloomPink)"/>
+    <ellipse class="bloom-b" cx="1320" cy="780" rx="380" ry="280" fill="url(#myoBloomRose)"/>
+    <ellipse class="bloom-c" cx="380"  cy="820" rx="500" ry="340" fill="url(#myoBloomPeach)"/>
+    <ellipse cx="900"  cy="500" rx="320" ry="220" fill="url(#myoBloomPink)" opacity="0.6"/>
+  </g>
+
+  <g><g transform="translate(1015.6 515.7) rotate(301.2)" opacity="0.70"><path d="M 0 -5.207255676214118 L 1.56 -1.56 L 5.207255676214118 0 L 1.56 1.56 L 0 5.207255676214118 L -1.56 1.56 L -5.207255676214118 0 L -1.56 -1.56 Z" fill="#F5C443"/></g><g transform="translate(1421.2 152.7) rotate(245.8)" opacity="0.55"><path d="M 0 -4.767171011451865 L 1.43 -1.43 L 4.767171011451865 0 L 1.43 1.43 L 0 4.767171011451865 L -1.43 1.43 L -4.767171011451865 0 L -1.43 -1.43 Z" fill="#F5C443"/></g><g transform="translate(1352.1 781.8) rotate(39.6)" opacity="0.83"><path d="M 0 -3.9511533355835127 L 1.19 -1.19 L 3.9511533355835127 0 L 1.19 1.19 L 0 3.9511533355835127 L -1.19 1.19 L -3.9511533355835127 0 L -1.19 -1.19 Z" fill="#F5C443"/></g><g transform="translate(392.0 503.4) rotate(24.4)" opacity="0.63"><path d="M 0 -3.8563537234149408 L 1.16 -1.16 L 3.8563537234149408 0 L 1.16 1.16 L 0 3.8563537234149408 L -1.16 1.16 L -3.8563537234149408 0 L -1.16 -1.16 Z" fill="#F5C443"/></g><g transform="translate(1338.9 383.5) rotate(193.1)" opacity="0.68"><path d="M 0 -4.86230068570876 L 1.46 -1.46 L 4.86230068570876 0 L 1.46 1.46 L 0 4.86230068570876 L -1.46 1.46 L -4.86230068570876 0 L -1.46 -1.46 Z" fill="#F5C443"/></g><g transform="translate(1092.3 186.8) rotate(333.8)" opacity="0.81"><path d="M 0 -2.3237908293704095 L 0.70 -0.70 L 2.3237908293704095 0 L 0.70 0.70 L 0 2.3237908293704095 L -0.70 0.70 L -2.3237908293704095 0 L -0.70 -0.70 Z" fill="#F5C443"/></g><g transform="translate(176.1 298.3) rotate(169.6)" opacity="0.61"><path d="M 0 -2.7772072384832427 L 0.83 -0.83 L 2.7772072384832427 0 L 0.83 0.83 L 0 2.7772072384832427 L -0.83 0.83 L -2.7772072384832427 0 L -0.83 -0.83 Z" fill="#F5C443"/></g><g transform="translate(108.6 694.4) rotate(228.0)" opacity="0.49"><path d="M 0 -4.715898025300703 L 1.41 -1.41 L 4.715898025300703 0 L 1.41 1.41 L 0 4.715898025300703 L -1.41 1.41 L -4.715898025300703 0 L -1.41 -1.41 Z" fill="#F5C443"/></g><g transform="translate(858.2 388.9) rotate(204.0)" opacity="0.60"><path d="M 0 -5.146255504871078 L 1.54 -1.54 L 5.146255504871078 0 L 1.54 1.54 L 0 5.146255504871078 L -1.54 1.54 L -5.146255504871078 0 L -1.54 -1.54 Z" fill="#F5C443"/></g><g transform="translate(1483.5 943.8) rotate(130.5)" opacity="0.47"><path d="M 0 -3.3073399189597694 L 0.99 -0.99 L 3.3073399189597694 0 L 0.99 0.99 L 0 3.3073399189597694 L -0.99 0.99 L -3.3073399189597694 0 L -0.99 -0.99 Z" fill="#F5C443"/></g><g transform="translate(754.0 496.8) rotate(259.4)" opacity="0.53"><path d="M 0 -2.6014796838280745 L 0.78 -0.78 L 2.6014796838280745 0 L 0.78 0.78 L 0 2.6014796838280745 L -0.78 0.78 L -2.6014796838280745 0 L -0.78 -0.78 Z" fill="#F5C443"/></g></g>
+</svg>
