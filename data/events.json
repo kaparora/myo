@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Summer Camp 2024",
+    "date": "June - July 2024",
+    "description": "Fun-filled summer camp with art, play, and creative activities for children aged 2-5",
+    "image": "🏕️",
+    "details": "Join us for an exciting summer experience filled with outdoor play, art workshops, storytelling, and nature exploration."
+  },
+  {
+    "id": 2,
+    "title": "Art Workshop",
+    "date": "Every Saturday",
+    "description": "Creative art workshop for children of all ages",
+    "image": "🎨",
+    "details": "Explore various art mediums and techniques in a supportive, creative environment. Perfect for self-expression and skill building."
+  },
+  {
+    "id": 3,
+    "title": "Meditation Class",
+    "date": "Thursdays & Saturdays",
+    "description": "Mindfulness and meditation for children and adults",
+    "image": "🧘",
+    "details": "Learn mindfulness and meditation techniques to reduce stress and improve focus. Classes for both children and adults."
+  }
+]

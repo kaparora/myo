@@ -1,29 +1,8 @@
 import Link from "next/link";
+import eventsData from "@/data/events.json";
 
 export default function Events() {
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: "Summer Camp 2024",
-      date: "June - July 2024",
-      description: "Fun-filled summer camp with art, play, and creative activities",
-      image: "🏕️",
-    },
-    {
-      id: 2,
-      title: "Art Workshop",
-      date: "Every Saturday",
-      description: "Creative art workshop for children of all ages",
-      image: "🎨",
-    },
-    {
-      id: 3,
-      title: "Meditation Class",
-      date: "Thursdays & Saturdays",
-      description: "Mindfulness and meditation for children and adults",
-      image: "🧘",
-    },
-  ];
+  const upcomingEvents = eventsData;
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
