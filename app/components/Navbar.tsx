@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 bg-myo-cream shadow-sm border-b border-myo-peach/20 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex flex-col md:flex-row justify-between items-center md:h-16">
           {/* Logo with Lotus Icon */}
           <Link href="/">
             <div className="flex items-center gap-3 font-serif text-2xl font-light tracking-[0.18em]">
@@ -14,7 +14,7 @@ export default function Navbar() {
           </Link>
 
           {/* Navigation Links - Right Aligned */}
-          <div className="hidden gap-9 text-xs font-medium uppercase tracking-[0.14em] opacity-85 md:flex">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-9 text-xs font-medium uppercase tracking-[0.14em] opacity-85 py-3 md:py-0">
             <Link
               href="/"
               className="text-myo-teal hover:opacity-100 transition-opacity"
