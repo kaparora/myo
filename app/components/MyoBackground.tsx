@@ -47,10 +47,10 @@ export function MyoBackground({
           </filter>
         </defs>
         <g filter="url(#myoEdge)">
-          <ellipse className="bloom-a" cx={1180} cy={280} rx={540} ry={380} fill="url(#myoBloomPink)"  />
-          <ellipse className="bloom-b" cx={1320} cy={780} rx={380} ry={280} fill="url(#myoBloomRose)"  />
-          <ellipse className="bloom-c" cx={380}  cy={820} rx={500} ry={340} fill="url(#myoBloomPeach)" />
-          <ellipse cx={900} cy={500} rx={320} ry={220} fill="url(#myoBloomPink)" opacity={0.6} />
+          <ellipse className="bloom-a" cx={800} cy={200} rx={540} ry={380} fill="url(#myoBloomPink)"  />
+          <ellipse className="bloom-b" cx={1000} cy={700} rx={380} ry={280} fill="url(#myoBloomRose)"  />
+          <ellipse className="bloom-c" cx={300}  cy={600} rx={500} ry={340} fill="url(#myoBloomPeach)" />
+          <ellipse cx={800} cy={400} rx={400} ry={280} fill="url(#myoBloomPink)" opacity={0.5} />
         </g>
       </svg>
 
