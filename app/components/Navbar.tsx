@@ -9,7 +9,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/myo.jpg"
+              src="/myo.png"
               alt="MYO Logo"
               width={50}
               height={50}

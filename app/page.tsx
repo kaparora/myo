@@ -9,7 +9,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
             <Image
-              src="/myo.jpg"
+              src="/myo.png"
               alt="MYO Logo"
               width={150}
               height={150}
