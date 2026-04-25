@@ -36,6 +36,7 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
     });
 
     const data = await response.json();
+    console.log("reCAPTCHA response:", { success: data.success, score: data.score });
     // Accept if score is above 0.5 (0.0 = definitely a bot, 1.0 = definitely human)
     return data.success && data.score > 0.5;
   } catch (error) {
@@ -83,39 +84,48 @@ export async function POST(request: NextRequest) {
     if (recaptchaToken && recaptchaToken.trim() !== "") {
       const isHuman = await verifyRecaptcha(recaptchaToken);
       if (!isHuman) {
-        return NextResponse.json(
-          { error: "Verification failed. Please try again." },
-          { status: 400 }
-        );
+        // In development, be more lenient - just log instead of blocking
+        if (process.env.NODE_ENV === "development") {
+          console.warn("reCAPTCHA verification failed but allowing submission in development mode");
+        } else {
+          return NextResponse.json(
+            { error: "Verification failed. Please try again." },
+            { status: 400 }
+          );
+        }
       }
     } else if (process.env.RECAPTCHA_SECRET_KEY) {
       console.warn("reCAPTCHA token not provided");
-      // If reCAPTCHA is configured but token not provided, it's likely a client error
-      // But we'll allow it to proceed for development
     }
 
     const contactEmail = process.env.CONTACT_EMAIL || "contact@myodaycare.com";
 
     // Send email via Resend
     if (process.env.RESEND_API_KEY) {
-      await resend.emails.send({
-        from: "contact@myodaycare.com",
-        to: contactEmail,
-        replyTo: email,
-        subject: `New Contact Form Submission: ${subject}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
-          <p><strong>Subject:</strong> ${subject}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, "<br>")}</p>
-        `,
-      });
+      try {
+        const emailResult = await resend.emails.send({
+          from: "delivered@resend.dev",
+          to: contactEmail,
+          replyTo: email,
+          subject: `New Contact Form Submission: ${subject}`,
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
+            <p><strong>Subject:</strong> ${subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>${message.replace(/\n/g, "<br>")}</p>
+          `,
+        });
+        console.log("Email sent successfully:", emailResult);
+      } catch (emailError) {
+        console.error("Error sending email via Resend:", emailError);
+        // Still return success to user, log for debugging
+      }
     } else {
       // Log to console if Resend not configured
-      console.log("Contact form submission:", {
+      console.log("Contact form submission (Resend not configured):", {
         name,
         email,
         phone,
