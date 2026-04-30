@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden">
         <MyoBackground className="absolute inset-0 -z-10" drift />
-        <div className="flex min-h-screen flex-col px-7 pt-0 pb-7 md:px-20 md:pb-10">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex min-h-screen flex-col pt-0">
           {/* Hero Content */}
           <section className="flex flex-1 max-w-2xl flex-col justify-center pt-[4%]">
             <div className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-myo-rose">
@@ -18,9 +18,7 @@ export default function Home() {
               <em className="font-normal italic text-myo-rose">grow, create, heal.</em>
             </h1>
             <p className="m-0 mb-9 max-w-lg text-base leading-relaxed text-myo-teal-soft md:text-lg">
-              MYO is a Waldorf-inspired daycare and art therapy centre in Jaipur —
-              where children are met with warmth, slowed-down rhythms, and the quiet
-              magic of making things with their hands.
+              MYO is a Waldorf-inspired daycare and art therapy centre in Jaipur—where children develop through creative play, mindful practices, and the healing power of making things with their hands. We nurture not just learning, but emotional wellbeing and confidence.
             </p>
             <div className="flex gap-4 flex-wrap">
               <Link

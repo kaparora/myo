@@ -10,12 +10,13 @@ export default function Navbar() {
     <nav className="sticky top-0 bg-myo-cream shadow-sm border-b border-myo-peach/20 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo with Lotus Icon */}
+          {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-3 font-serif text-2xl font-light tracking-[0.18em]">
-              <Lotus className="h-7 w-7" />
-              <span className="text-myo-teal">MYO</span>
-            </div>
+            <img
+              src="/myo.png"
+              alt="MYO"
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Hamburger Menu Button - Mobile Only */}

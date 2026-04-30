@@ -1,9 +1,9 @@
 import Link from "next/link";
-import eventsData from "@/data/events.json";
+// import eventsData from "@/data/events.json";
 import { MyoBackground } from "@/app/components/MyoBackground";
 
 export default function Events() {
-  const upcomingEvents = eventsData;
+  // const upcomingEvents = eventsData;
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -16,7 +16,8 @@ export default function Events() {
           Join us for special programs and community events
         </p>
 
-        {/* Events Grid */}
+        {/* Events Grid - Coming Soon */}
+        {/* Uncomment when ready to publish events
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {upcomingEvents.map((event) => (
             <div
@@ -38,6 +39,7 @@ export default function Events() {
             </div>
           ))}
         </div>
+        */}
 
         {/* Registration CTA */}
         <section className="bg-white/60 border border-myo-peach/30 rounded-lg p-12 text-center">
@@ -52,7 +54,7 @@ export default function Events() {
             href="/contact"
             className="bg-myo-teal text-white px-8 py-3 rounded-full hover:opacity-90 transition font-bold inline-block"
           >
-            Register Now
+            Inquire Now
           </Link>
         </section>
 

@@ -1,24 +1,24 @@
 {
   "about": {
     "title": "About MYO",
-    "garimaBio": "[Garima's background and story to be added]",
+    "garimaBio": "Garima is an educator, arts facilitator, and founder of MYO Centre in Jaipur. With a Masters degree in Visual Arts and four years of experience as a Waldorf educator, she has deep expertise in nurturing child development through creative play and learning. Her additional training in arts-based therapy enriches how she supports families and children's holistic growth.",
     "garimaroleTitle": "Meet Garima Arora",
     "philosophy": {
       "title": "Our Philosophy",
-      "text": "[Core philosophy and approach to be added]"
+      "text": "At MYO, we believe children learn best through creative play, meaningful connection, and a safe, nurturing environment. Waldorf education focuses on imagination, creativity, and whole-child development rather than early academics. Garima's training in arts-based therapy deepens this approach, giving her tools to support children's emotional well-being alongside their learning. She creates spaces where children can explore, express themselves, and develop confidence through mindfulness practices, creative expression using art and music, and an understanding of each child's unique needs—whether they're thriving toddlers or children who need extra support. Her research and work with children have shown how creative expression helps with development, confidence, and emotional regulation."
     },
     "waldorfExplanation": {
-      "title": "Why Waldorf & Art Therapy?",
-      "text": "[Explanation of methodology to be added]"
+      "title": "Credentials & Experience",
+      "text": "Garima holds a Master's degree in Visual Arts from Baroda and is a certified practitioner from Kathakar Trust with B.O.A.T affiliation through WCCL Pune. She has advanced research and intervention experience from her work at Vimhans Hospital Delhi, where she developed arts-based therapy approaches for children. Her expertise spans multiple therapeutic modalities and art forms—including visual arts, music, theatre, and somatic practices that integrate body awareness and movement. She has conducted workshops across educational institutions in Delhi NCR with caregivers, teachers, and adults, and brings four years of Waldorf educator training from Ukti Waldorf in Delhi. Today, she offers both one-on-one sessions at MYO's Civil Lines centre and online services to clients outside Jaipur."
     },
-    "photoCaption": "Photo of Garima to be added"
+    "photoCaption": "Garima Arora, founder of MYO"
   },
   "services": {
     "theNest": {
       "id": "the-nest",
       "name": "The Nest",
       "shortDescription": "A safe, nurturing space for toddlers with open-ended play, Waldorf-based learning, and a co-working area for parents.",
-      "fullDescription": "[Description of The Nest program to be added]",
+      "fullDescription": "The Nest is a nurturing Waldorf-inspired space where toddlers learn through creative play, imaginative exploration, and hands-on activities. We believe in slowed-down rhythms that honor each child's pace of development. Through art, music, movement, and open-ended play, children develop confidence, creativity, and emotional awareness. We also provide mindfulness practices to cultivate self-awareness and calm. For working parents, we offer a comfortable co-working space where you can stay connected to your child's day. Special programs include birthday parties, playdates, and extra-curricular classes designed to foster joyful learning and meaningful connections.",
       "offerings": [
         "Open-ended play area",
         "Playhouse for toddlers",
@@ -32,10 +32,9 @@
     "healingSpace": {
       "id": "healing-space",
       "name": "The Healing Space",
-      "shortDescription": "Art-based therapy for children with behavioral and learning challenges. Meditation and wellness support for adults.",
-      "fullDescription": "[Description of The Healing Space to be added]",
+      "shortDescription": "Art-based therapy for children with behavioral and learning challenges. Wellness support for adults.",
+      "fullDescription": "The Healing Space is dedicated to emotional wellness and holistic support for children and adults. Using arts-based therapy—including visual art, music, theatre, and movement—combined with mindfulness practices and somatic techniques, we help children with behavioral and learning challenges develop emotional regulation, confidence, and meaningful connections. For adults, we offer therapeutic support for mental wellness and personal growth. Our approach is deeply personalized, recognizing that each person's healing journey is unique. Whether working through challenges or seeking to deepen self-awareness and wellbeing, The Healing Space provides a safe, nurturing environment for transformation.",
       "offerings": [
-        "Meditation classes",
         "Arts-based therapy for children with behavioral/learning challenges",
         "Mental health support for adults",
         "Special late-hour services (Thursdays & Saturdays)"
