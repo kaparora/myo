@@ -41,17 +41,19 @@ export default function About() {
             </section>
           </div>
 
-          {/* Garima's Photo */}
+          {/* Garima's Photos */}
           <div className="flex-shrink-0 lg:w-80">
-            <div className="sticky top-20">
+            <div className="sticky top-20 space-y-6">
               <img
                 src="/GarimaArora.jpeg"
                 alt={aboutData.photoCaption}
                 className="w-full rounded-lg shadow-lg"
               />
-              <p className="text-center text-myo-teal-soft mt-4 text-sm italic">
-                {aboutData.photoCaption}
-              </p>
+              <img
+                src="/gallery/garima/garima-1.jpeg"
+                alt="Garima with children at MYO"
+                className="w-full rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>

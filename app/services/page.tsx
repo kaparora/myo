@@ -2,6 +2,19 @@ import Link from "next/link";
 import content from "@/data/content.json";
 import { MyoBackground } from "@/app/components/MyoBackground";
 
+const servicePhotos: Record<string, { src: string; alt: string }[]> = {
+  "the-nest": [
+    { src: "/gallery/space/space-1.jpeg", alt: "The Nest play space" },
+    { src: "/gallery/activities/activity-6.jpeg", alt: "Children doing art activities" },
+    { src: "/gallery/fun/fun-5.png", alt: "Children having fun" },
+  ],
+  "healing-space": [
+    { src: "/gallery/garima/garima-7.png", alt: "Garima working with children" },
+    { src: "/gallery/activities/activity-1.jpeg", alt: "Art therapy activity" },
+    { src: "/gallery/space/space-4.jpeg", alt: "The Healing Space" },
+  ],
+};
+
 export default function Services() {
   const { services, businessInfo } = content;
   const servicesList = [services.theNest, services.healingSpace, services.specialNeeds];
@@ -15,6 +28,7 @@ export default function Services() {
         </h1>
 
         {servicesList.map((service) => {
+          const photos = servicePhotos[service.id] ?? [];
           return (
             <section
               key={service.id}
@@ -27,6 +41,19 @@ export default function Services() {
               <p className="text-myo-teal-soft text-lg mb-6 leading-relaxed">
                 {service.fullDescription}
               </p>
+
+              {photos.length > 0 && (
+                <div className={`grid gap-4 mb-8 ${photos.length === 3 ? "grid-cols-3" : "grid-cols-2"}`}>
+                  {photos.map((photo) => (
+                    <img
+                      key={photo.src}
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  ))}
+                </div>
+              )}
 
               <h3 className="text-2xl font-semibold text-myo-teal mb-4">
                 What We Offer
