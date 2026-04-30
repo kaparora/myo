@@ -55,7 +55,7 @@ export default function RootLayout({
               "@type": "ChildCare",
               name: "MYO — Waldorf Daycare & Healing Centre",
               description: "A Waldorf-inspired daycare and art therapy centre in Jaipur nurturing child development through creative play, mindfulness, and holistic care.",
-              url: "https://myo.center",
+              url: "https://www.myocenter.co.in",
               telephone: "+919311897957",
               address: {
                 "@type": "PostalAddress",
