@@ -56,6 +56,12 @@ export default function Navbar() {
               Events
             </Link>
             <Link
+              href="/gallery"
+              className="text-myo-teal hover:opacity-100 transition-opacity"
+            >
+              Gallery
+            </Link>
+            <Link
               href="/contact"
               className="text-myo-teal hover:opacity-100 transition-opacity"
             >
@@ -94,6 +100,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Events
+            </Link>
+            <Link
+              href="/gallery"
+              className="text-myo-teal hover:opacity-100 transition-opacity block"
+              onClick={() => setIsOpen(false)}
+            >
+              Gallery
             </Link>
             <Link
               href="/contact"
