@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import content from "@/data/content.json";
 import { MyoBackground } from "@/app/components/MyoBackground";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description: "Explore MYO's services in Jaipur — The Nest Waldorf daycare for toddlers, The Healing Space for arts-based therapy, and special needs support for children and families.",
+};
 
 const servicePhotos: Record<string, { src: string; alt: string }[]> = {
   "the-nest": [

@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { MyoBackground } from "@/app/components/MyoBackground";
+
+export const metadata: Metadata = {
+  title: "MYO — Waldorf Daycare & Healing Centre, Jaipur",
+  description: "MYO is a Waldorf-inspired daycare and art therapy centre in Civil Lines, Jaipur. A gentle place for children to grow, create, and heal through play and creative expression.",
+};
 
 export default function Home() {
   return (

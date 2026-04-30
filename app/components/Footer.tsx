@@ -74,6 +74,16 @@ export default function Footer() {
                   @myo_center
                 </a>
               </p>
+              <p>
+                <a
+                  href="https://wa.me/919311897957"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-myo-yellow hover:text-white"
+                >
+                  WhatsApp Us
+                </a>
+              </p>
             </div>
           </div>
         </div>

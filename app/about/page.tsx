@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import content from "@/data/content.json";
 import { MyoBackground } from "@/app/components/MyoBackground";
+
+export const metadata: Metadata = {
+  title: "About Garima Arora",
+  description: "Meet Garima Arora — Waldorf educator, arts-based therapy facilitator, and founder of MYO Centre in Jaipur. Learn about her philosophy and approach to holistic child development.",
+};
 
 export default function About() {
   const aboutData = content.about;

@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 // import eventsData from "@/data/events.json";
 import { MyoBackground } from "@/app/components/MyoBackground";
+
+export const metadata: Metadata = {
+  title: "Events",
+  description: "Upcoming events at MYO Jaipur — summer camps, art workshops, playdates, and special programs for children and families in Civil Lines, Jaipur.",
+};
 
 export default function Events() {
   // const upcomingEvents = eventsData;
