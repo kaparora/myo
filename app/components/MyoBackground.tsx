@@ -5,7 +5,6 @@ type Props = {
   drift?: boolean;
   flecks?: boolean;
   fleckCount?: number;
-  grain?: boolean;
 };
 
 export function MyoBackground({
@@ -13,7 +12,6 @@ export function MyoBackground({
   drift = false,
   flecks = true,
   fleckCount = 11,
-  grain = true,
 }: Props) {
   return (
     <div
@@ -41,12 +39,8 @@ export function MyoBackground({
             <stop offset="0%"   stopColor="var(--color-myo-rose)"  stopOpacity="0.55" />
             <stop offset="100%" stopColor="var(--color-myo-rose)"  stopOpacity="0" />
           </radialGradient>
-          <filter id="myoEdge" x="-50%" y="-50%" width="200%" height="200%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves={2} seed={3} />
-            <feDisplacementMap in="SourceGraphic" scale={55} />
-          </filter>
         </defs>
-        <g filter="url(#myoEdge)">
+        <g>
           <ellipse className="bloom-a" cx={800} cy={200} rx={540} ry={380} fill="url(#myoBloomPink)"  />
           <ellipse className="bloom-b" cx={1000} cy={700} rx={380} ry={280} fill="url(#myoBloomRose)"  />
           <ellipse className="bloom-c" cx={300}  cy={600} rx={500} ry={340} fill="url(#myoBloomPeach)" />
@@ -56,15 +50,6 @@ export function MyoBackground({
 
       {flecks && <Flecks count={fleckCount} />}
 
-      {grain && (
-        <div
-          className="absolute inset-0 opacity-40 mix-blend-multiply"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0 0.3 0 0 0 0.18 0'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>\")",
-          }}
-        />
-      )}
     </div>
   );
 }
