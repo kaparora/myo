@@ -53,12 +53,12 @@ export default function About() {
               <img
                 src="/GarimaArora.jpeg"
                 alt={aboutData.photoCaption}
-                className="w-full rounded-lg shadow-lg"
+                className="w-full aspect-square object-cover rounded-full shadow-lg"
               />
               <img
                 src="/gallery/garima/garima-1.jpeg"
                 alt="Garima with children at MYO"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full aspect-square object-cover rounded-full shadow-lg"
               />
             </div>
           </div>

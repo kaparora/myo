@@ -15,7 +15,7 @@ const servicePhotos: Record<string, { src: string; alt: string }[]> = {
     { src: "/gallery/fun/fun-5.png", alt: "Children having fun" },
   ],
   "healing-space": [
-    { src: "/gallery/garima/garima-7.png", alt: "Garima working with children" },
+    { src: "/gallery/garima/garima-7.JPG", alt: "Garima working with children" },
     { src: "/gallery/activities/activity-1.jpeg", alt: "Art therapy activity" },
     { src: "/gallery/space/space-4.jpeg", alt: "The Healing Space" },
   ],
@@ -55,7 +55,7 @@ export default function Services() {
                       key={photo.src}
                       src={photo.src}
                       alt={photo.alt}
-                      className="w-full h-48 object-cover rounded-lg"
+                      className="w-full aspect-square object-cover rounded-full"
                     />
                   ))}
                 </div>

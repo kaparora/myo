@@ -57,7 +57,7 @@ const sections: { title: string; photos: Photo[] }[] = [
       { src: "/gallery/garima/garima-4.jpeg", alt: "Garima with children" },
       { src: "/gallery/garima/garima-5.jpeg", alt: "Garima with children" },
       { src: "/gallery/garima/garima-6.jpeg", alt: "Garima with children" },
-      { src: "/gallery/garima/garima-7.png", alt: "Garima with children" },
+      { src: "/gallery/garima/garima-7.JPG", alt: "Garima with children" },
     ],
   },
 ];
