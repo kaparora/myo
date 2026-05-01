@@ -27,6 +27,11 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-myo-yellow">Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link href="/" className="text-myo-cream hover:text-white">
+                  Home
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="text-myo-cream hover:text-white">
                   About
                 </Link>
@@ -39,6 +44,11 @@ export default function Footer() {
               <li>
                 <Link href="/events" className="text-myo-cream hover:text-white">
                   Events
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="text-myo-cream hover:text-white">
+                  Gallery
                 </Link>
               </li>
               <li>
