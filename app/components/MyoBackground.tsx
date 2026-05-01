@@ -26,13 +26,13 @@ export function MyoBackground({
       >
         <defs>
           <radialGradient id="myoBloomPink" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor="var(--color-myo-pink)"  stopOpacity="0.85" />
-            <stop offset="55%"  stopColor="var(--color-myo-pink)"  stopOpacity="0.35" />
+            <stop offset="0%"   stopColor="var(--color-myo-pink)"  stopOpacity="0.45" />
+            <stop offset="55%"  stopColor="var(--color-myo-pink)"  stopOpacity="0.15" />
             <stop offset="100%" stopColor="var(--color-myo-pink)"  stopOpacity="0" />
           </radialGradient>
           <radialGradient id="myoBloomPeach" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor="var(--color-myo-peach)" stopOpacity="0.8" />
-            <stop offset="55%"  stopColor="var(--color-myo-peach)" stopOpacity="0.3" />
+            <stop offset="0%"   stopColor="var(--color-myo-peach)" stopOpacity="0.9" />
+            <stop offset="55%"  stopColor="var(--color-myo-peach)" stopOpacity="0.5" />
             <stop offset="100%" stopColor="var(--color-myo-peach)" stopOpacity="0" />
           </radialGradient>
           <radialGradient id="myoBloomRose" cx="50%" cy="50%" r="50%">
