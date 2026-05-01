@@ -13,9 +13,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/">
             <img
-              src="/myo.png"
+              src="/myo.jpg"
               alt="MYO"
-              className="h-12 w-auto"
+              className="h-12 w-12 rounded-full object-cover"
             />
           </Link>
 

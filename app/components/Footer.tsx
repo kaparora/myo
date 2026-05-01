@@ -9,9 +9,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Lotus className="h-7 w-7" />
-              <h3 className="text-xl font-serif font-light text-myo-yellow">MYO</h3>
+            <div className="mb-4">
+              <img
+                src="/myo.jpg"
+                alt="MYO"
+                className="h-12 w-12 rounded-full object-cover"
+              />
             </div>
             <p className="text-myo-cream text-sm">
               A Waldorf daycare and healing centre focused on child growth and
