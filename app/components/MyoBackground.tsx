@@ -25,26 +25,27 @@ export function MyoBackground({
         style={{ minHeight: "100%" }}
       >
         <defs>
-          <radialGradient id="myoBloomPink" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor="var(--color-myo-pink)"  stopOpacity="0.45" />
-            <stop offset="55%"  stopColor="var(--color-myo-pink)"  stopOpacity="0.15" />
-            <stop offset="100%" stopColor="var(--color-myo-pink)"  stopOpacity="0" />
-          </radialGradient>
           <radialGradient id="myoBloomPeach" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor="var(--color-myo-peach)" stopOpacity="0.9" />
-            <stop offset="55%"  stopColor="var(--color-myo-peach)" stopOpacity="0.5" />
+            <stop offset="0%"   stopColor="var(--color-myo-peach)" stopOpacity="0.45" />
+            <stop offset="55%"  stopColor="var(--color-myo-peach)" stopOpacity="0.15" />
             <stop offset="100%" stopColor="var(--color-myo-peach)" stopOpacity="0" />
           </radialGradient>
-          <radialGradient id="myoBloomRose" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor="var(--color-myo-rose)"  stopOpacity="0.55" />
-            <stop offset="100%" stopColor="var(--color-myo-rose)"  stopOpacity="0" />
+          <radialGradient id="myoBloomYellow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stopColor="var(--color-myo-yellow)" stopOpacity="0.2" />
+            <stop offset="55%"  stopColor="var(--color-myo-yellow)" stopOpacity="0.07" />
+            <stop offset="100%" stopColor="var(--color-myo-yellow)" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="myoBloomSky" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stopColor="var(--color-myo-sky)"   stopOpacity="0.35" />
+            <stop offset="55%"  stopColor="var(--color-myo-sky)"   stopOpacity="0.12" />
+            <stop offset="100%" stopColor="var(--color-myo-sky)"   stopOpacity="0" />
           </radialGradient>
         </defs>
         <g>
-          <ellipse className="bloom-a" cx={800} cy={200} rx={540} ry={380} fill="url(#myoBloomPink)"  />
-          <ellipse className="bloom-b" cx={1000} cy={700} rx={380} ry={280} fill="url(#myoBloomRose)"  />
-          <ellipse className="bloom-c" cx={300}  cy={600} rx={500} ry={340} fill="url(#myoBloomPeach)" />
-          <ellipse cx={800} cy={400} rx={400} ry={280} fill="url(#myoBloomPink)" opacity={0.5} />
+          <ellipse className="bloom-a" cx={800} cy={200} rx={540} ry={380} fill="url(#myoBloomPeach)"  />
+          <ellipse className="bloom-b" cx={1000} cy={700} rx={380} ry={280} fill="url(#myoBloomSky)"   />
+          <ellipse className="bloom-c" cx={300}  cy={600} rx={500} ry={340} fill="url(#myoBloomYellow)" />
+          <ellipse cx={800} cy={400} rx={400} ry={280} fill="url(#myoBloomPeach)" opacity={0.25} />
         </g>
       </svg>
 
