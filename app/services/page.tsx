@@ -12,7 +12,7 @@ const servicePhotos: Record<string, { src: string; alt: string }[]> = {
   "the-nest": [
     { src: "/gallery/space/space-1.jpeg", alt: "The Nest play space" },
     { src: "/gallery/activities/activity-6.jpeg", alt: "Children doing art activities" },
-    { src: "/gallery/fun/fun-5.png", alt: "Children having fun" },
+    { src: "/gallery/fun/fun-5.JPG", alt: "Children having fun" },
   ],
   "healing-space": [
     { src: "/gallery/garima/garima-7.JPG", alt: "Garima working with children" },

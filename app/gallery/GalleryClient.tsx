@@ -41,7 +41,7 @@ const sections: { title: string; photos: Photo[] }[] = [
       { src: "/gallery/fun/fun-2.jpeg", alt: "Children having fun" },
       { src: "/gallery/fun/fun-3.jpeg", alt: "Children having fun" },
       { src: "/gallery/fun/fun-4.jpeg", alt: "Children having fun" },
-      { src: "/gallery/fun/fun-5.png", alt: "Children having fun" },
+      { src: "/gallery/fun/fun-5.JPG", alt: "Children having fun" },
       { src: "/gallery/fun/fun-6.jpeg", alt: "Children having fun" },
       { src: "/gallery/fun/fun-7.jpeg", alt: "Children having fun" },
       { src: "/gallery/fun/fun-8.jpeg", alt: "Children having fun" },
