@@ -46,12 +46,17 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Circular Photo */}
-            <div className="flex-shrink-0">
+            {/* Circular Photos */}
+            <div className="flex-shrink-0 flex flex-col items-center gap-6">
+              <img
+                src="/gallery/fun/fun-5.JPG"
+                alt="Children having fun at MYO"
+                className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover shadow-lg"
+              />
               <img
                 src="/gallery/garima/garima-7.JPG"
                 alt="Garima Arora, founder of MYO"
-                className="w-64 h-64 md:w-96 md:h-96 rounded-full object-cover shadow-lg"
+                className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover shadow-lg"
               />
             </div>
           </section>
