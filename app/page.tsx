@@ -31,14 +31,14 @@ export default function Home() {
               <div className="flex gap-4 flex-wrap">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-3.5 rounded-full bg-myo-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:opacity-90"
+                  className="inline-flex items-center justify-center gap-3.5 rounded-full bg-myo-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:opacity-90 w-48"
                 >
                   <span>Explore Services</span>
                   <Arrow />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3.5 rounded-full border-2 border-myo-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-myo-teal transition hover:bg-myo-cream"
+                  className="inline-flex items-center justify-center gap-3.5 rounded-full border-2 border-myo-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-myo-teal transition hover:bg-myo-cream w-48"
                 >
                   <span>Inquire Now</span>
                   <Arrow />
